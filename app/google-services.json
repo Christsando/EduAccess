@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1049202027512",
+    "firebase_url": "https://eduaccess-35645-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "eduaccess-35645",
+    "storage_bucket": "eduaccess-35645.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049202027512:android:b36c806da950c4f7ad840d",
+        "android_client_info": {
+          "package_name": "com.example.eduaccess"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD62fNFcYQIYjKv7uxt3JTWNVqWCLPntMM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
