@@ -4,3 +4,10 @@ EduAccess is an educational application designed to facilitate learning for stud
 
 # Features
 - Sttudy Materials : 
+
+# Documentation
+![Screenshot1]("C:EduAccess\App_EduAccess\LoginApp.png")
+![Screenshot2]("C:EduAccess\App_EduAccess\RegisterApp.png")
+![Screenshot3]("C:EduAccess\App_EduAccess\SplashApp.png")
+![Screenshot4]("C:EduAccess\App_EduAccess\VideoApp.png")
+![Screenshot5]("C:EuAcces\App_EduAccess\HoneApp.png")
