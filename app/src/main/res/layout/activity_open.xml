@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".OpenActivity"
     android:orientation="vertical"
+    android:background="#B4D4FF"
     android:gravity ="center">
 
     <ImageView
@@ -19,6 +20,7 @@
 
     <TextView
         android:id="@+id/textView"
+        android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/eduaccess"

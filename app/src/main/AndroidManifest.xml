@@ -17,6 +17,7 @@
         android:theme="@style/Theme.EduAccess"
         tools:targetApi="31">
         <activity
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
             android:name=".VideoFeatureActivity"
             android:exported="false" />
         <activity

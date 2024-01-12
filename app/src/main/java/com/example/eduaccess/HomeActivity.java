@@ -3,9 +3,14 @@ package com.example.eduaccess;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -35,6 +40,12 @@ public class HomeActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        // Set the status bar color
+        int actionBarColor = ContextCompat.getColor(this, R.color.blue);
+        int statusBarColor = ContextCompat.getColor(this, R.color.blue);
+        setActionBarAndStatusBarColors(actionBarColor, statusBarColor);
+        saveColorsToPreferences(actionBarColor, statusBarColor);
+
         // initialize variable
         buttonLogout = (Button) findViewById(R.id.button_logout);
         video = findViewById(R.id.videoFeature);
@@ -42,6 +53,8 @@ public class HomeActivity extends AppCompatActivity{
         user = FirebaseAuth.getInstance().getCurrentUser();
         uid = user.getUid();
         reference = FirebaseDatabase.getInstance().getReference();
+
+
 
         // get userName on db
         reference.addValueEventListener(new ValueEventListener() {
@@ -107,5 +120,23 @@ public class HomeActivity extends AppCompatActivity{
     public void openVideoActivity() {
         Intent intent = new Intent(this, VideoFeatureActivity.class);
         startActivity(intent);
+    }
+
+    private void setActionBarAndStatusBarColors(int actionBarColor, int statusBarColor) {
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setBackgroundDrawable(new ColorDrawable(actionBarColor));
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setStatusBarColor(statusBarColor);
+        }
+    }
+
+    private void saveColorsToPreferences(int actionBarColor, int statusBarColor) {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putInt("action_bar_color", actionBarColor);
+        editor.putInt("status_bar_color", statusBarColor);
+        editor.apply();
     }
 }
