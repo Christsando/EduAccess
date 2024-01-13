@@ -15,3 +15,8 @@ App_EduAccessDocumentation
 ![Screenshot3]("C:EduAccess\App_EduAccess\SplashApp.png")
 ![Screenshot4]("C:EduAccess\App_EduAccess\VideoApp.png")
 ![Screenshot5]("C:EuAcces\App_EduAccess\HoneApp.png")
+
+# Member
+1) Ariel Christsando Yudistya Putra - Hacker
+2) Nikoleta Kinanthi - Hustler
+3) Dhifuloh Dhiya Ulhaq - Hipster
