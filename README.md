@@ -29,11 +29,5 @@ On top two feature, is it the "Class" user can join class to study together, sha
 # Documentation
 App_EduAccessDocumentation
 
-![Screenshot1]("C:EduAccess\App_EduAccess\LoginApp.png")
-![Screenshot2]("C:EduAccess\App_EduAccess\RegisterApp.png")
-![Screenshot3]("C:EduAccess\App_EduAccess\SplashApp.png")
-![Screenshot4]("C:EduAccess\App_EduAccess\VideoApp.png")
-![Screenshot5]("C:EuAcces\App_EduAccess\HoneApp.png")
-
 # Apk Download
 app\build\outputs\apk\debug
