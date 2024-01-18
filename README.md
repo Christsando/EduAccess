@@ -6,6 +6,15 @@
 # EduAccess
 EduAccess is an educational application designed to facilitate learning for students aspiring to enter higher education institutions. It serves as a comprehensive platform for both students and current university students to enhance their academic skills and knowledge.
 
+# Manual User Code
+Starting program OpenActivity.xml
+All layout file (frontend)
+Location : app -> src -> main -> res -> layout
+
+All back program (backend)
+Location : app -> src -> main -> java/com/example/eduaccess
+
+
 # Features
 We have top feature, that is the "Study Material", the user can interact with each other on the chat section, and can watch their material study in anytime they want.
 On top two feature, is it the "Class" user can join class to study together, sharing their struggling when studying on realtime. 
