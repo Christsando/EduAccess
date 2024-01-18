@@ -10,7 +10,7 @@
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="412dp"
-        android:layout_height="170dp"
+        android:layout_height="155dp"
         android:background="#B4D4FF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,9 +26,9 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="50dp"
-            android:layout_marginTop="26dp"
+            android:layout_marginTop="38dp"
             android:layout_marginEnd="50dp"
-            android:layout_marginBottom="56dp"
+            android:layout_marginBottom="44dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -37,7 +37,8 @@
                 android:id="@+id/greetUser"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="13dp"
+                android:layout_marginTop="0dp"
+                android:text="Greeting"
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold"
@@ -50,6 +51,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@+id/greetUser"
                 android:layout_alignParentBottom="true"
+                android:layout_marginTop="-10sp"
+                android:text="Username"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -67,6 +70,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.571"
                 app:shapeAppearanceOverlay="@style/circular"
                 app:srcCompat="@drawable/default_avatar" />
 
@@ -74,54 +78,44 @@
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/mainMenu"
         android:layout_width="156dp"
         android:layout_height="43dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="28dp"
         android:text="@string/main_menu"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.109"
+        app:layout_constraintHorizontal_bias="0.062"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="108dp"
-        android:layout_height="143dp"
-        android:layout_marginTop="24dp"
-        app:cardCornerRadius="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.092"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
-
-        <!--Image for join class feature-->
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="99dp"
-            android:src="@drawable/graduation_celebration" />
-
-        <!--text information feature-->
-        <TextView
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/button_logout"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100sp"
-            android:gravity="center"
-            android:text="Feature 1" />
-    </androidx.cardview.widget.CardView>
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="152dp"
+            android:text="@string/logout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/videoFeature"
-        android:layout_width="108dp"
+        android:layout_width="105dp"
         android:layout_height="143dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginTop="24dp"
         app:cardCornerRadius="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.102"
-        app:layout_constraintStart_toEndOf="@+id/cardView"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainMenu">
 
         <!--Image for join class feature-->
         <ImageView
@@ -139,15 +133,19 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="108dp"
+        android:id="@+id/joinMentor"
+        android:layout_width="105dp"
         android:layout_height="143dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_toEndOf="@+id/videoFeature"
         app:cardCornerRadius="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.944"
-        app:layout_constraintStart_toEndOf="@+id/videoFeature"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/joinClass"
+        app:layout_constraintTop_toBottomOf="@+id/mainMenu">
 
         <!--Image for join class feature-->
         <ImageView
@@ -161,20 +159,36 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="100sp"
             android:gravity="center"
-            android:text="Feature 3" />
+            android:text="@string/mentoring" />
     </androidx.cardview.widget.CardView>
 
-    <Button
-        android:id="@+id/button_logout"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/joinClass"
+        android:layout_width="105dp"
+        android:layout_height="143dp"
+        android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="152dp"
-        android:text="@string/logout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="24dp"
+        android:layout_toEndOf="@+id/videoFeature"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toStartOf="@id/joinMentor"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/videoFeature"
+        app:layout_constraintTop_toBottomOf="@+id/mainMenu">
+
+        <!--Image for join class feature-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="99dp"
+            android:src="@drawable/graduation_celebration" />
+
+        <!--text information feature-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100sp"
+            android:gravity="center"
+            android:text="Class" />
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

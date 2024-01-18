@@ -18,4 +18,9 @@
     <string name="video">Video</string>
     <string name="eduaccess">EduAccess</string>
     <string name="eduacces">EduAcces</string>
+    <string name="how_to_get_video_thumbnail_from_youtube_url">How to get video thumbnail from youtube url.</string>
+    <string name="python_in_2_hours">Python in 2 hours</string>
+    <string name="feature_1">Feature 1</string>
+    <string name="feature_2">feature 2</string>
+    <string name="mentoring">Mentoring</string>
 </resources>

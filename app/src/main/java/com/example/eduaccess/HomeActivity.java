@@ -1,6 +1,5 @@
 package com.example.eduaccess;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
@@ -53,8 +52,6 @@ public class HomeActivity extends AppCompatActivity{
         user = FirebaseAuth.getInstance().getCurrentUser();
         uid = user.getUid();
         reference = FirebaseDatabase.getInstance().getReference();
-
-
 
         // get userName on db
         reference.addValueEventListener(new ValueEventListener() {
