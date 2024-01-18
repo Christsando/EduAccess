@@ -9,7 +9,10 @@ EduAccess is an educational application designed to facilitate learning for stud
 # Features
 - Register
 - Login <include register>
-- Sttudy Materials : View Video 
+- Study Materials : View Video
+- Class Feature   : Join class, study together
+- Mentoring       : 1 on 1 mentoring and 1 to many mentoring
+- Sertif feature
 
 # Documentation
 App_EduAccessDocumentation
