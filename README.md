@@ -1,5 +1,4 @@
 # EduAccess
-
 EduAccess is an educational application designed to facilitate learning for students aspiring to enter higher education institutions. It serves as a comprehensive platform for both students and current university students to enhance their academic skills and knowledge.
 
 # Features
@@ -20,3 +19,6 @@ App_EduAccessDocumentation
 1) Ariel Christsando Yudistya Putra - Hacker
 2) Nikoleta Kinanthi - Hustler
 3) Dhifuloh Dhiya Ulhaq - Hipster
+
+# Apk Download
+app\build\outputs\apk\debug
