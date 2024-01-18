@@ -8,6 +8,7 @@ EduAccess is an educational application designed to facilitate learning for stud
 
 # Manual User Code
 Starting program OpenActivity.xml
+
 All layout file (frontend)
 Location : app -> src -> main -> res -> layout
 
