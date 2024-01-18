@@ -32,7 +32,7 @@ public class HomeActivity extends AppCompatActivity{
     FirebaseUser user;
     DatabaseReference reference;
     String uid;
-    CardView video;
+    CardView video, joinClass, mentoring;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +48,7 @@ public class HomeActivity extends AppCompatActivity{
         // initialize variable
         buttonLogout = (Button) findViewById(R.id.button_logout);
         video = findViewById(R.id.videoFeature);
+        joinClass = findViewById(R.id.joinClass);
 
         user = FirebaseAuth.getInstance().getCurrentUser();
         uid = user.getUid();
@@ -83,10 +84,18 @@ public class HomeActivity extends AppCompatActivity{
             }
         });
 
+        // Event listener
         video.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openVideoActivity();
+            }
+        });
+        // Event listener
+        joinClass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openClassActivity();
             }
         });
 
@@ -111,14 +120,21 @@ public class HomeActivity extends AppCompatActivity{
         } else {
             greetingUser.setText("Good Evening!");
         }
-
-
     }
+
+    // Change view to videoActivity
     public void openVideoActivity() {
         Intent intent = new Intent(this, VideoFeatureActivity.class);
         startActivity(intent);
     }
 
+    // Change view to classActivity
+    public void openClassActivity(){
+        Intent intent = new Intent(this, ClassActivity.class);
+        startActivity(intent);
+    }
+
+    // setting up and save the current theme on action bar
     private void setActionBarAndStatusBarColors(int actionBarColor, int statusBarColor) {
         if (getSupportActionBar() != null) {
             getSupportActionBar().setBackgroundDrawable(new ColorDrawable(actionBarColor));

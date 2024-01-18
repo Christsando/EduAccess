@@ -26,13 +26,6 @@ public class Video {
     }
 
     // Getter and setter object
-    public String getVideoLink() {
-        return imageLink;
-    }
-
-    public void setVideoLink(String videoLink) {
-        this.imageLink = videoLink;
-    }
 
     public int getVideoId() {
         return videoId;
@@ -56,5 +49,21 @@ public class Video {
 
     public void setVideoTeacher(String videoTeacher) {
         this.videoTeacher = videoTeacher;
+    }
+
+    public String getImageLink() {
+        return imageLink;
+    }
+
+    public void setImageLink(String imageLink) {
+        this.imageLink = imageLink;
+    }
+
+    public String getVideoLink() {
+        return videoLink;
+    }
+
+    public void setVideoLink(String videoLink) {
+        this.videoLink = videoLink;
     }
 }

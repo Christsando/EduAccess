@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#B4D4FF</color>
     <color name="coal">#151716</color>
+    <color name="link_color">#OO22EE</color>
 </resources>

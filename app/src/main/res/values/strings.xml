@@ -23,4 +23,10 @@
     <string name="feature_1">Feature 1</string>
     <string name="feature_2">feature 2</string>
     <string name="mentoring">Mentoring</string>
+    <string name="video_teacher">Video teacher</string>
+    <string name="video_title">Video title</string>
+    <string name="python_fast_track">Python Fast Track</string>
+    <string name="let_s_fin_the_a_with_us">Let\'s fin the \'A\' with us!</string>
+    <string name="please_sign_in_to_view_personalized_recommendations">Please sign in to view personalized recommendations</string>
+    <string name="login_link_welcome">Login</string>
 </resources>

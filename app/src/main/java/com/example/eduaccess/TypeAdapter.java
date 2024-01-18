@@ -1,6 +1,7 @@
 package com.example.eduaccess;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,6 +35,30 @@ public class TypeAdapter extends RecyclerView.Adapter<TypeAdapter.VideoTypeViewH
             this.imageThumbnail = itemView.findViewById(R.id.videoThumbnail);
             this.textTitle = itemView.findViewById(R.id.videoTitle);
             this.textTeacher = itemView.findViewById(R.id.videoTeacher);
+
+            // Set click listener for the item
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // Handle item click here
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION) {
+                        Video clickedVideo = videoList.get(position);
+
+                        // Create an Intent to start the VideoActivity
+                        Intent intent = new Intent(context, VideoActivity.class);
+
+                        // Pass data to the VideoActivity
+                        intent.putExtra("videoLink", clickedVideo.getVideoLink());
+                        intent.putExtra("videoId", clickedVideo.getVideoId());
+                        intent.putExtra("videoTitle", clickedVideo.getVideoTitle());
+                        intent.putExtra("videoTeacher", clickedVideo.getVideoTeacher());
+
+                        // Start the VideoActivity
+                        context.startActivity(intent);
+                    }
+                }
+            });
         }
     }
 
@@ -48,7 +73,7 @@ public class TypeAdapter extends RecyclerView.Adapter<TypeAdapter.VideoTypeViewH
         Video video = videoList.get(position);
 
         // Load image using Glide from the URL in the Video object
-        String thumbnailUrl = video.getVideoLink();
+        String thumbnailUrl = video.getImageLink();
         Glide.with(context).load(Uri.parse(thumbnailUrl)).into(holder.imageThumbnail);
 
         // Set data to views

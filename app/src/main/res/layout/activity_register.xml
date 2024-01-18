@@ -9,6 +9,11 @@
     android:padding="50sp"
     tools:context=".RegisterActivity">
 
+    <ImageView
+        android:layout_width="210dp"
+        android:layout_height="210dp"
+        android:src="@drawable/registration_image"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

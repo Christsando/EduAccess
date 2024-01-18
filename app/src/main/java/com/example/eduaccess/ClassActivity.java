@@ -1,11 +1,7 @@
 package com.example.eduaccess;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -14,16 +10,12 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.MenuItem;
 
-import com.example.eduaccess.databinding.ActivityVideoFeatureBinding;
+public class ClassActivity extends AppCompatActivity {
 
-import java.util.ArrayList;
-
-public class VideoFeatureActivity extends AppCompatActivity {
-    ActivityVideoFeatureBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_video_feature);
+        setContentView(R.layout.activity_class);
 
         // Get the saved ActionBar color and status bar color from preferences
         int actionBarColor = getActionBarColorFromPreferences();
@@ -32,29 +24,7 @@ public class VideoFeatureActivity extends AppCompatActivity {
         // Set the ActionBar color and status bar color
         setActionBarAndStatusBarColors(actionBarColor, statusBarColor);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        // Initialize the VideoRepository
-        VideoRepository videoRepository = new VideoRepository();
-        ArrayList<Video> video= new ArrayList();
-        video.add(new Video(0,"Python in 12 hours", "Bro Code", "https://img.youtube.com/vi/XKHEtdqhLK8/0.jpg","XKHEtdqhLK8?si=nVT9M-yO_XBVA3TR"));
-        video.add(new Video(1,"Java getter and setter", "Kelas Terbuka", "https://img.youtube.com/vi/zwDMHJzTUzs/0.jpg","zwDMHJzTUzs?si=ct2aseNHdV7gNmMh"));
-        video.add(new Video(2,"Java tutorial full course", "Telusko", "https://img.youtube.com/vi/BGTx91t8q50/0.jpg","BGTx91t8q50?si=o5WVlqJ0WEjG1v3l"));
-        video.add(new Video(3,"Firebase tutorial", "Easy Tuto", "https://img.youtube.com/vi/TAEbP_ccjsk/0.jpg","TAEbP_ccjsk?si=q-XI6giCHRP5bvLy"));
-
-        // Save all video
-        videoRepository.saveVideo(video);
-
-        // Adapter
-        TypeAdapter adapter = new TypeAdapter(this, video);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
-
-        // The recyclerview
-        RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-        mRecyclerView.setLayoutManager(linearLayoutManager);
-        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
-        mRecyclerView.setAdapter(adapter);
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
