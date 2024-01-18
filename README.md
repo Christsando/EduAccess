@@ -13,7 +13,6 @@ All layout file (frontend)
 Location : app -> src -> main -> res -> layout
 
 All back program (backend)
-
 Location : app -> src -> main -> java/com/example/eduaccess
 
 
