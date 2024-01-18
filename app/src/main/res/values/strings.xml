@@ -29,4 +29,5 @@
     <string name="let_s_fin_the_a_with_us">Let\'s fin the \'A\' with us!</string>
     <string name="please_sign_in_to_view_personalized_recommendations">Please sign in to view personalized recommendations</string>
     <string name="login_link_welcome">Login</string>
+    <string name="last_class_attended">Last Class Attended</string>
 </resources>
